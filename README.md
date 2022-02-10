@@ -3,6 +3,8 @@
 
 
 # 수정 고려 사항
+<!-- HTML -->
+
 - About
     about__majors > major
         - major를 div 말고 article을 사용해도 괜찮을꺼 같다.
@@ -20,3 +22,18 @@
         굳이 span을 넣어 주지 않아도 효과나 그런것들을 적용하는데 무리는 없을거 같은데,
         아니면 "p"로 쓰는 방법도 있지 않나??
         
+
+
+<!-- CSS -->
+
+- Global
+    setting 다시 맞추기.
+
+- Navbar 
+    bg color 바꿔주기.
+
+- Home 
+    * bg img 다시 pick하기.
+
+    * h태그 색 다시 조정.
+    
