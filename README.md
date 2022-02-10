@@ -37,3 +37,10 @@
 
     * h태그 색 다시 조정.
     
+
+- About 
+    * about__major
+        display를 gird로 바꾸고 6개 들어가게 변경하자.
+
+    * major 
+        width 값도 생각 해봐야 될듯.
