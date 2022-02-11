@@ -29,8 +29,10 @@
 - Global
     setting 다시 맞추기.
 
+
 - Navbar 
     bg color 바꿔주기.
+
 
 - Home 
     * bg img 다시 pick하기.
@@ -45,5 +47,16 @@
     * major 
         width 값도 생각 해봐야 될듯.
 
+
 - Skills 
     * view 보면서 수정할 부분 있으면 수정하는 걸로 하자.
+
+
+- Work 
+    * work__project 
+        display : flex 인거 grid로 바꿔서 진행하자.
+
+    * work__categories 
+        btn_txt 뭔가 마음에 안듬. 중간에 오게 만들자.
+
+    * project__title 폰트 굵기 좀더 굵게 하거나 크기 키우기.
