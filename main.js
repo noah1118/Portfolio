@@ -29,16 +29,27 @@ homeContactBtn.addEventListener('click', () => {
 });
 
 // Make home slowly fade to transparent as the window scrolls down
+const homeContent = document.querySelector('.home__container')
+const homeContentHeight = homeContent.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  const homeContent = document.querySelector('.home__container')
-  const homeContentHeight = homeContent.getBoundingClientRect().height;
-
-  // console.log(1 - window.scrollY/homeContentHeight); <-- 잘 기억 해두기. (복습 필요)
+  // console.log(1 - window.scrollY / homeContentHeight); <-- 잘 기억 해두기. (복습 필요)
   homeContent.style.opacity = 1 - window.scrollY/homeContentHeight
 })
 
+// Show "arrow up" btn when scroll down
+const arrowUp = document.querySelector('.arrow-up')
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeContentHeight / 2) {
+    arrowUp.classList.add('visible')
+  } else {
+    arrowUp.classList.remove('visible')
+  }
+})
 
-
+// Handle click on the "arrow up" btn
+arrowUp.addEventListener('click', () => {
+  scrollTo('#home');
+})
 
 
 
