@@ -411,7 +411,7 @@ p {
 }
 
 .testimonial_speech-bubble {
-  padding: 10px;
+  padding: 20px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
