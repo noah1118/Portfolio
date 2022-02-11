@@ -16,14 +16,21 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-
-  console.log(target)
-  console.log(link)
   if (link == undefined) {
     return;
   }
+  scrollTo(link);
+});
 
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior:"smooth"})
-})
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact')
+homeContactBtn.addEventListener('click', () => {
+  scrollTo('#contact');
+});
+
+function scrollTo(selector) {
+  const scrollTo = document.querySelector(selector)
+  scrollTo.scrollIntoView({
+    behavior: "smooth"
+  });
+} 
