@@ -61,11 +61,17 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  // 1)방법
-  
   projectContainer.classList.add('anim-out');
 
+  // Remove selection form the previous previous item and select new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+  console.log(target)
+
   setTimeout(() => {
+  // 1)방법
     projects.forEach((project) => {
       if(filter === '*' || filter === project.dataset.type) {
         project.classList.remove('invisible');
@@ -87,7 +93,6 @@ workBtnContainer.addEventListener('click', (e) => {
   //   project = projects[i];
   //   console.log(project);
   // }
-
 
   // console.log(filter);
 });
