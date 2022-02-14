@@ -78,16 +78,15 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: var(--font-regular);
+  font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
 
 p {
   font-size: var(--font-regular);
-  font-weight: var(--font-regular);
+  font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 4px 0
 }
 
 /* Navbar */
@@ -133,8 +132,8 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  right: 32px;
-  top: 22px;
+  right: 16px;
+  top: 14px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -173,6 +172,7 @@ p {
 /* Section common */
 .section {
   padding: 50px;
+  padding-top: 90px;
   text-align: center;
   margin: auto;
 }
@@ -245,7 +245,7 @@ p {
   justify-content: center;
   background: var(--color-light-grey);
   color: var(--color-light-white);
-  margin: 20px 0;
+  margin: 40px 0 20px;
 }
 
 .skillset__title {
@@ -308,6 +308,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative; 
 }
 
 .category__btn.selected,
@@ -319,7 +320,7 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 5px;
 }
 
 .category__count {
@@ -330,9 +331,9 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
-  top: -20px;
-  left: 10px;
+  position: absolute;
+  top: 15px;
+  right: 18px;
   opacity: 0;
   transition: all var(--animation-duration) ease;
 }
@@ -501,6 +502,15 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -522,16 +532,32 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 60px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .category__btn {
+    margin: 4px;
+    width: 100%;
+  }
+
+  .category__count {
+    right: 75px;
   }
 
   .project {
@@ -540,8 +566,28 @@ p {
     margin-bottom: 10px;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(odd),
+  .testimonial__avatar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonial_speech-bubble {
+    order: 1;
+  }
+
+  .arrow-up {
+    right: 16px;
+    bottom: 16px;
   }
 }
