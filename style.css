@@ -308,7 +308,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
-  position: relative; 
+  position: relative;
 }
 
 .category__btn.selected,

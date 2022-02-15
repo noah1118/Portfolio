@@ -24,7 +24,7 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 // Navbar toggle button for small screen
-const navbarToglleBtn =document.querySelector('.navbar__toggle-btn');
+const navbarToglleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToglleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
@@ -40,7 +40,7 @@ const homeContent = document.querySelector('.home__container')
 const homeContentHeight = homeContent.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   // console.log(1 - window.scrollY / homeContentHeight); <-- 잘 기억 해두기. (복습 필요)
-  homeContent.style.opacity = 1 - window.scrollY/homeContentHeight
+  homeContent.style.opacity = 1 - window.scrollY / homeContentHeight
 })
 
 // Show "arrow up" btn when scroll down
@@ -78,9 +78,9 @@ workBtnContainer.addEventListener('click', (e) => {
   console.log(target)
 
   setTimeout(() => {
-  // 1)방법
+    // 1)방법
     projects.forEach((project) => {
-      if(filter === '*' || filter === project.dataset.type) {
+      if (filter === '*' || filter === project.dataset.type) {
         project.classList.remove('invisible');
       } else {
         project.classList.add('invisible');
@@ -111,4 +111,4 @@ function scrollTo(selector) {
   scrollTo.scrollIntoView({
     behavior: "smooth"
   });
-} 
+}
